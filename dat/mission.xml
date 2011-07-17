@@ -139,6 +139,7 @@
    <priority>3</priority>
    <cond>faction.playerStanding("Empire") &gt;= 0 and var.peek("es_cargo") == true</cond>
    <chance>350</chance>
+   <done>Empire Recruitment</done>
    <location>Computer</location>
    <faction>Empire</faction>
   </avail>
@@ -658,9 +659,24 @@
  </mission>
  <mission name="Kidnapped">
   <lua>neutral/kidnapped/traffic_00</lua>
+  <flags>
+   <unique />
+  </flags>
   <avail>
    <chance>100</chance>
    <location>None</location>
+  </avail>
+ </mission>
+ <mission name="Kidnapped 2">
+  <lua>neutral/kidnapped/traffic_01</lua>
+  <flags>
+   <unique />
+  </flags>
+  <avail>
+   <done>Kidnapped</done>
+   <chance>100</chance>
+   <location>Bar</location>
+   <planet>Brooks</planet>
   </avail>
  </mission>
 </Missions>
